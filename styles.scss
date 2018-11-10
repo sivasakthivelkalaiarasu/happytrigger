@@ -11,6 +11,15 @@
 
 } 
 
+@font-face {
+    font-family: 'proxima_novasemibold';
+    src: url('font/proximanova/ProximaNova-Semibold.woff2') format('woff2'),
+         url('font/proximanova/ProximaNova-Semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} 
+
 /** Variables **/
 
 	$colors: (
@@ -714,6 +723,144 @@
 			}
 		} 
 	}
+.themeColorBg{
+	background-color: map-get($colors, headerColor) !important;
+}
 
+.whiteColorBg{
+	background-color:#ffffff !important;
+}
+.blackColorText{
+	color:map-get($colors, black) !important;
+}
+.boxShadowNone{
+	box-shadow: none;
+}
+.cursor{
+	cursor:pointer;
+}
+.buttonBorder{
+	border: 1px solid rgba(112, 112, 112, 0.33);
+}
+.proxiSemibold{
+	font-family:proxima_novasemibold;
+}
+.logoSetting{
+	padding:29px 0px;
+}
+.themeCustomizeSection {
+	.pending{
+				position:relative;
+				&:before{
+					content:'';
+					position:absolute;
+					top: 14px;
+					left: -25px;
+					display:inline-block;
+					background: url(img/happytrigger/c-wpink.svg) no-repeat;
+					width:12px;
+					height:12px;
+				}
+	}
+	label{
+		font-size:12px;
+		opacity: 0.54;
+		color:map-get($colors, black) !important;
+		font-weight:600;
+	}
+	button{
+		font-size:14px;
+		font-weight:600;
+	}
+}
+
+.lightGreytxt{
+		font-size:12px;
+		opacity: 0.54;
+		color:map-get($colors, black) !important;
+		font-weight:600;
+}
+
+.darkText{
+		font-size:14px;
+		color:#000;
+	    font-weight: 600;
+	}
+
+.logoDel{
+	background-color:#8b8686 !important;
+}
+
+.downloadBtn{
+	background-image:url('img/happytrigger/downloadIcon.png');
+	background-repeat:no-repeat;
+	background-position-y: center;
+    background-position-x: 15px;	
+}
+
+.uploadBtn{
+	background-image:url('img/happytrigger/uploadIcon.png');
+	background-repeat:no-repeat;
+	background-position-y: center;
+    background-position-x: 15px;
+    
+    span{
+    	font-weight:600;
+    	font-size:14px;
+    }
  
- 
+    input{
+	    background: transparent;
+	    font-size: 0px;
+	    border: none;
+	    position: absolute;
+	    width: 100%;
+	    left: 0;
+	    top: 0;
+	    bottom: 0;
+	    opacity:0;
+	    cursor:pointer;
+	}
+}
+
+.md-form label {
+    font-size: 14px;
+    color: #000;
+    opacity: .5;
+    font-weight: normal;
+}
+
+.vpnDownload {
+    max-width: 247px;
+    background-position-x: 23%;
+}
+
+.numberOfUsers{
+	table{
+		border:1px solid #eaeaea;
+		th{
+			color:#757575;
+			font-size:11px;
+			vertical-align:middle;
+			border-bottom:1px solid #eaeaea;
+		}
+		td{
+			vertical-align:middle;
+			font-size:13px;
+			color:#5e5e5e;
+			border-color:#eaeaea !important;
+			label{
+				font-size:13px;
+				font-weight:600;
+			}
+			span{
+				font-size:12px;
+			}
+		}	
+		td.activeUser{		
+			color:#61d19d !important;
+			font-size:11px !important;
+		}
+	}	
+
+}
