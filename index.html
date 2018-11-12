@@ -14,7 +14,8 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="styles.css" />
-    <link href="css/skins/flat/purple.css" rel="stylesheet">
+    <link href="css/skins/flat/purple.css" rel="stylesheet" />
+    <link href="css/jquery.dataTables.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -357,7 +358,9 @@
 
                                 </div>
                                 <div class="col-12 col-lg-6 pl-lg-5 pl-0 pr-0">
-                                    <p><label class="m-0">Logo setting</label></p>
+                                    <p>
+                                        <label class="m-0">Logo setting</label>
+                                    </p>
                                     <div class="col-md-12 d-flex flex-row flex-wrap px-0">
                                         <div class="col-md-6 pl-0 pr-0 pr-md-3 mb-3 mb-md-0">
                                             <div class="buttonBorder col-md-12 px-0 text-center rounded logoSetting">
@@ -541,137 +544,499 @@
                                 </div>
                             </div>
                         </div>
-					</div>
-					<div class="tab-pane container" id="tab4">
-							<div class="row">
-									<div class="col-md-10 offset-md-1">
-										<div class="col-md-12 d-flex flex-row flex-wrap px-0">
-											<div class="col-md-7 px-0 text-center text-md-left">
-												<label class="darkText proxiSemibold">Confirm Installation of VPN Key</label>
-												<div class="row px-3 align-items-center justify-content-center align-items-md-start justify-content-md-start">
-												<div class="mr-4">
-														<div class="custom-control mb-3 custom-checkbox input-selected pl-0">
-															<input type="checkbox">
-															<label class="darkText proxiSemibold">Yes</label>
-														</div>
-													</div>
-													<div>
-														<div class="custom-control pl-0 mb-3 custom-checkbox">
-															<input type="checkbox">
-															<label class="darkText proxiSemibold">No</label>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-5 text-center text-md-left">
-													<button class="text-capitalize btn py-3 px-0 pl-5 waves-effect waves-light m-0 themeColorBg boxShadowNone buttonBorder rounded downloadBtn proxiSemibold pr-3 text-center w-100 vpnDownload">VPN Download</button>
-											</div>
-										</div>
-									</div>
-							</div>
-							<div class="row py-5">
-                                    <div class="col-md-12 text-center">
-                                        <button type="button" class="text-capitalize btn btn-success btn-mb-success pl-5 pr-5">Save</button>
+                    </div>
+                    <div class="tab-pane container" id="tab4">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="col-md-12 d-flex flex-row flex-wrap px-0">
+                                    <div class="col-md-7 px-0 text-center text-md-left">
+                                        <label class="darkText proxiSemibold">Confirm Installation of VPN Key</label>
+                                        <div class="row px-3 align-items-center justify-content-center align-items-md-start justify-content-md-start">
+                                            <div class="mr-4">
+                                                <div class="custom-control mb-3 custom-checkbox input-selected pl-0">
+                                                    <input type="checkbox">
+                                                    <label class="darkText proxiSemibold">Yes</label>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="custom-control pl-0 mb-3 custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <label class="darkText proxiSemibold">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 text-center text-md-left">
+                                        <button class="text-capitalize btn py-3 px-0 pl-5 waves-effect waves-light m-0 themeColorBg boxShadowNone buttonBorder rounded downloadBtn proxiSemibold pr-3 text-center w-100 vpnDownload">VPN Download</button>
                                     </div>
                                 </div>
-					</div>
+                            </div>
+                        </div>
+                        <div class="row py-5">
+                            <div class="col-md-12 text-center">
+                                <button type="button" class="text-capitalize btn btn-success btn-mb-success pl-5 pr-5">Save</button>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="tab-pane container numberOfUsers" id="tab5">
-							<div class="row">
-									<div class="col-md-12 px-4">
-										<div class="row">
-											<div class="col-md-9">
-												<label>Total Number of Users</label>
-												<p>1034</p>
-											</div>
-											<div class="col-md-3">
-													<button class="text-capitalize btn py-3 px-0 pl-5 waves-effect waves-light m-0 themeColorBg boxShadowNone buttonBorder rounded  proxiSemibold pr-3 text-center w-100 vpnDownload">Create New User</button>
-											</div>
-										</div>
-									</div>
-							</div>
-							<div class="row">
-									<div class="table-responsive">
-										<table class="table" id="dtBasicExample">
-											<thead>
-												<tr>
-													<th><div class="custom-control custom-checkbox">
-															<input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-														</div>
-													</th>
-													<th>User Name & Email</th>
-													<th>First Name</th>
-													<th>Last Name</th>
-													<th>Password</th>
-													<th>Status</th>
-													<th>Seed User</th>
-													<th>Role</th>
-													<th>Department</th>
-													<th>Edit</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td><div class="custom-control custom-checkbox">
-															<input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-														</div></td>
-													<td><label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
-													<td>Dhipu</td>
-													<td>Mathew</td>
-													<td>Mathew0#</td>
-													<td class="activeUser proxiSemibold">Active</td>
-													<td>Yes</td>
-													<td>Creator</td>
-													<td>Credit</td>
-													<td>...</td>
-												</tr>
-												<tr>
-														<td><div class="custom-control custom-checkbox">
-																<input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-															</div></td>
-														<td><label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
-														<td>Dhipu</td>
-														<td>Mathew</td>
-														<td>Mathew0#</td>
-														<td class="activeUser proxiSemibold">Active</td>
-														<td>Yes</td>
-														<td>Creator</td>
-														<td>Credit</td>
-														<td>...</td>
-													</tr>
-													<tr>
-															<td><div class="custom-control custom-checkbox">
-																	<input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-																</div></td>
-															<td><label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
-															<td>Dhipu</td>
-															<td>Mathew</td>
-															<td>Mathew0#</td>
-															<td class="inActiveUser proxiSemibold">Inactive</td>
-															<td>Yes</td>
-															<td>Creator</td>
-															<td>Credit</td>
-															<td>...</td>
-														</tr>
-														<tr>
-																<td><div class="custom-control custom-checkbox">
-																		<input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-																	</div></td>
-																<td><label class="w-100">Arun</label><span>dhipumathew04@gmail.com</span></td>
-																<td>Dhipu</td>
-																<td>Mathew</td>
-																<td>Mathew0#</td>
-																<td class="inActiveUser proxiSemibold">Inactive</td>
-																<td>Yes</td>
-																<td>Creator</td>
-																<td>Credit</td>
-																<td>...</td>
-															</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-					</div>
+                    <div class="tab-pane container datatable-design" id="tab5">
+                        <div class="row">
+                            <div class="col-md-12 px-4">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <label>Total Number of Users</label>
+                                        <p>1034</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button class="text-capitalize btn py-3 px-0 pl-5 waves-effect waves-light m-0 themeColorBg boxShadowNone buttonBorder rounded  proxiSemibold pr-3 text-center w-100 vpnDownload">Create New User</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table" id="dtBasicExample">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </th>
+                                            <th class="proxiSemibold">User Name & Email</th>
+                                            <th class="proxiSemibold">First Name</th>
+                                            <th class="proxiSemibold">Last Name</th>
+                                            <th class="proxiSemibold">Password</th>
+                                            <th class="proxiSemibold">Status</th>
+                                            <th class="proxiSemibold">Seed User</th>
+                                            <th class="proxiSemibold">Role</th>
+                                            <th class="proxiSemibold">Department</th>
+                                            <th class="proxiSemibold">Edit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+  <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+  aria-expanded="false"><span class="font-weight-bold">...</span></button>
+
+<div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Edit</a>
+  <a class="dropdown-item" href="#">Delete</a>
+</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="inActiveUser proxiSemibold">Inactive</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Arun</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="inActiveUser proxiSemibold">Inactive</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="inActiveUser proxiSemibold">Inactive</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Arun</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="inActiveUser proxiSemibold">Inactive</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="inActiveUser proxiSemibold">Inactive</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Arun</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="inActiveUser proxiSemibold">Inactive</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="inActiveUser proxiSemibold">Inactive</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-center p-0">
+                                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="w-100">Arun</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="inActiveUser proxiSemibold">Inactive</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit</td>
+                                            <td>
+                                           
+                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
+                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
+                                              
+                                              <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                              </div>
+                                                                                          </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -688,13 +1053,13 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
     <script src="js/icheck.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 
     <script>
         jQuery(document).ready(function() {
 
-	
-
-
+            $('#dtBasicExample').DataTable();
+            $('.dataTables_length').addClass('bs-select');
 
             // Modal
             $("input.open-input-modal").click(function() {
@@ -723,8 +1088,16 @@
                 checkboxClass: 'icheckbox_flat-purple',
                 radioClass: 'iradio_flat-purple'
             });
-			
+            jQuery('.paginate_button').click(function(){
+                $('input').iCheck({
+                    checkboxClass: 'icheckbox_flat-purple',
+                    radioClass: 'iradio_flat-purple'
+                });
+            });
+
         });
+
+       
     </script>
 
     <!-- Central Modal Small -->

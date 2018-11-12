@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="css/skins/flat/purple.css" rel="stylesheet">
   <link href="css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="css/picker/classic.css" rel="stylesheet" />
+  <link href="css/picker/classic.date.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -173,26 +175,20 @@
 				</div>
 				<ul class="nav nav-pills nav-fill mb-tabs curve-md-tabs">
 					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#tab1">Live Campaigns</a>
+						<a class="nav-link" data-toggle="tab" href="#tab1">Campaigns Pending Review</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#tab2">Ready to Live Campaigns</a>
+						<a class="nav-link active" data-toggle="tab" href="#tab2">Approved Campaigns</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#tab3">Campaigns Under Review</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#tab4">Rejected Campaigns</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#tab5">Past Campaings</a>
+						<a class="nav-link" data-toggle="tab" href="#tab3">Rejected Under Review</a>
 					</li>
 				</ul>
 				<!-- Tab panes -->
 				<div class="tab-content mb-form-fields pt-5 datatable-design">
-					<div class="tab-pane active container" id="tab1">
-					<h2 class="heading-color">15 Campaigns Currently in live</h2>
-						<table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					<div class="tab-pane container" id="tab1">
+					<h2 class="heading-color">Campaigns pending review</h2>
+						<table id="dtPendingReview" class="table table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th class="th-sm">Campaign ID
@@ -367,12 +363,23 @@
   </tfoot>
 </table>
 					</div>
-					<div class="tab-pane container" id="tab2">
-						Tab 2
-					</div>
-					<div class="tab-pane container" id="tab3">tab3</div>
-					<div class="tab-pane container" id="tab4">
-					<table id="dtrejectedcampaings" class="table table-striped table-bordered tbody-pointer" cellspacing="0" width="100%">
+					<div class="tab-pane active container" id="tab2">
+						<h2 class="heading-color">15 Campaigns approved in selected period</h2>
+						<div class="row justify-content-center">
+						    <div class="col-3">
+						      <div class="md-form">
+						  <input placeholder="From Date" type="text" id="date-picker-example-from" class="form-control datepicker">
+						  <label for="date-picker-example-from">From</label>
+						</div>
+						    </div>
+						    <div class="col-3">
+						      <div class="md-form">
+						  <input placeholder="To date" type="text" id="date-picker-example-to" class="form-control datepicker">
+						  <label for="date-picker-example-to">To</label>
+						</div>
+						    </div>
+						  </div>
+						<table id="dtapprovedCampaigns" class="table table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th class="th-sm">Campaign ID
@@ -400,13 +407,13 @@
   </thead>
   <tbody>
     <tr>
-      <td class="details-control">00001</td>
+      <td>00001</td>
       <td>Engagement</td>
       <td>Actication of current Account Dormant customers</td>
       <td>CA_Inactive_User</td>
       <td>Customer who have been inactive for the last 60 days and more (but less than 180 days)</td>
       <td>12 Jul 2018 To 11 Aug 2018 </td>
-      <td>120.5k</td>
+      <td>120.5k <button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm waves-effect waves-light fs-8">View Report</button></td>
     </tr>
     <tr>
       <td>00001</td>
@@ -415,7 +422,7 @@
       <td>CA_Inactive_User</td>
       <td>Customer who have been inactive for the last 60 days and more (but less than 180 days)</td>
       <td>12 Jul 2018 To 11 Aug 2018 </td>
-      <td>120.5k</td>
+      <td>120.5k <button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm waves-effect waves-light fs-8">View Report</button></td>
     </tr>
     <tr>
       <td>00001</td>
@@ -424,7 +431,7 @@
       <td>CA_Inactive_User</td>
       <td>Customer who have been inactive for the last 60 days and more (but less than 180 days)</td>
       <td>12 Jul 2018 To 11 Aug 2018 </td>
-      <td>120.5k</td>
+      <td>120.5k <button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm waves-effect waves-light fs-8">View Report</button></td>
     </tr>
     <tr>
       <td>00001</td>
@@ -547,8 +554,23 @@
   </tfoot>
 </table>
 					</div>
-					<div class="tab-pane container" id="tab5">
-							<table id="dtpastcampaings" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					<div class="tab-pane container" id="tab3">
+						<h2 class="heading-color">15 Campaigns rejected in selected period</h2>
+						<div class="row justify-content-center">
+						    <div class="col-3">
+						      <div class="md-form">
+						  <input placeholder="From Date" type="text" id="date-picker-example-from" class="form-control datepicker">
+						  <label for="date-picker-example-from">From</label>
+						</div>
+						    </div>
+						    <div class="col-3">
+						      <div class="md-form">
+						  <input placeholder="To date" type="text" id="date-picker-example-to" class="form-control datepicker">
+						  <label for="date-picker-example-to">To</label>
+						</div>
+						    </div>
+						  </div>
+						<table id="dtrejectedCampaigns" class="table table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th class="th-sm">Campaign ID
@@ -582,7 +604,7 @@
       <td>CA_Inactive_User</td>
       <td>Customer who have been inactive for the last 60 days and more (but less than 180 days)</td>
       <td>12 Jul 2018 To 11 Aug 2018 </td>
-      <td>120.5k <button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm waves-effect waves-light fs-8 open-reportpopup">View Report</button></td>
+      <td>120.5k <button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm waves-effect waves-light fs-8">Drill Down</button></td>
     </tr>
     <tr>
       <td>00001</td>
@@ -591,7 +613,7 @@
       <td>CA_Inactive_User</td>
       <td>Customer who have been inactive for the last 60 days and more (but less than 180 days)</td>
       <td>12 Jul 2018 To 11 Aug 2018 </td>
-      <td>120.5k <button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm waves-effect waves-light fs-8 open-reportpopup">View Report</button></td>
+      <td>120.5k <button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm waves-effect waves-light fs-8">Drill Down</button></td>
     </tr>
     <tr>
       <td>00001</td>
@@ -600,7 +622,7 @@
       <td>CA_Inactive_User</td>
       <td>Customer who have been inactive for the last 60 days and more (but less than 180 days)</td>
       <td>12 Jul 2018 To 11 Aug 2018 </td>
-      <td>120.5k <button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm waves-effect waves-light fs-8 open-reportpopup">View Report</button></td>
+      <td>120.5k <button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm waves-effect waves-light fs-8">Drill Down</button></td>
     </tr>
     <tr>
       <td>00001</td>
@@ -741,6 +763,8 @@
   <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
   <script src="js/icheck.js"></script>
   <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+  <script src="js/picker.js"></script>
+  <script src="js/picker.date.js"></script>
   
 	<script>
 		jQuery(document).ready(function(){
@@ -772,15 +796,18 @@
 			});
 			
 			// Datatable init
-			$('#dtBasicExample').DataTable();
-			$('#dtpastcampaings').DataTable();
-			$('#dtrejectedcampaings').DataTable();
+			$('#dtPendingReview').DataTable();
+			$('#dtapprovedCampaigns').DataTable();
+			$('#dtrejectedCampaigns').DataTable();
 			$('.dataTables_length').addClass('bs-select');
+			var table = $('#dtrejectedcampaings').DataTable();	
 			
-			var table = $('#dtrejectedcampaings').DataTable();
+			// Date picker
+			$('.datepicker').pickadate();
 			
 			// Collapse
-			$('#dtrejectedcampaings tbody').on('click', 'td', function () {
+			var table = $('#dtPendingReview').DataTable();
+			$('#dtPendingReview tbody').on('click', 'td', function () {
 		        var tr = $(this).closest('tr');
 		        var row = table.row( tr );
 		 
@@ -796,17 +823,51 @@
 		        }
 		    } );
 		    
-		    //open popup
-		    $('.open-reportpopup').click(function(){
-		    	$("#viewReport").modal('show');	
-		    })
+		    // Collapse
+			var table = $('#dtrejectedCampaigns').DataTable();
+			$('#dtrejectedCampaigns tbody').on('click', 'td', function () {
+		        var tr = $(this).closest('tr');
+		        var row = table.row( tr );
+		 
+		        if ( row.child.isShown() ) {
+		            // This row is already open - close it
+		            row.child.hide();
+		            tr.removeClass('shown');
+		        }
+		        else {
+		            // Open this row
+		            row.child( rejectedformat() ).show();
+		            tr.addClass('shown');
+		        }
+		    } );
 		    
-
-			
-			
 		});
 		
-		function format ( ) {
+			function format ( ) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="5" width="100%" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<td>'+
+            	'<div class="row justify-content-around">'+
+            		'<div class="col-2">'+
+						'<button class="btn btn-success btn-sm btn-curve waves-effect waves-light">Approve</button>'+
+					'</div>'+
+					'<div class="col-2">'+
+						'<button class="btn btn-danger btn-sm btn-curve waves-effect waves-light">Reject</button> '+
+					'</div>'+
+					'<div class="col-6">'+
+						'<textarea class="form-control" placeholder="Comments"></textarea>'+
+					'</div>'+
+					'<div class="col-2">'+
+						'<button class="btn btn-success btn-sm btn-curve waves-effect waves-light">Submit</button></td>'+
+					'</div>'+
+				'</div>'+
+            '</td>'+
+        '</tr>'+
+    '</table>';
+}
+
+function rejectedformat ( ) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" width="100%" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
@@ -888,105 +949,6 @@
         <div class="modal-footer py-3 px-4">
           <button type="button" class="btn btn-success btn-mb-success pl-5 pr-5 text-capitalize">Save</button>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- Central Modal Small -->
-  
-  <div class="modal fade" id="viewReport" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered modal-lg modal-xl" role="document">
-    <!-- Change class .modal-sm to change the size of the modal -->
-
-
-      <div class="modal-content multi-select-modal">
-        <div class="modal-header py-3 px-4">
-          <h4 class="modal-title w-100" id="myModalLabel">Campaign Summary</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body p-4">
-        	<div class="row">
-				<div class="col-md-4">
-					<p>Campaign ID: 00003</p>
-				</div>
-				<div class="col-md-4">
-					<p>Campaign Type: Transition</p>
-				</div>
-				<div class="col-md-4">
-					<p>Campaign Name: Activation of current account Dormant Customers</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<p>Target Segment: CA_Unusual_Large_Depositar</p>
-				</div>
-				<div class="col-md-4 offset-md-4">
-					<p>Campaign Period: 12 July 2018 To 11 Aug 2018</p>
-				</div>
-			</div>
-			
-			<div class="row">
-				<div class="col-md-12">
-					<ul class="nav nav-pills nav-fill mb-tabs curve-md-tabs">
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#tab11">Overall Response Trend</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#tab22">Channel wise Response</a>
-					</li>
-				</ul>
-					<div class="tab-content mb-form-fields pt-5 datatable-design">
-						<div class="tab-pane container" id="tab11">
-							<div class="row">
-								<div class="col-md-6">
-									<p>Number of customers Contacted: 20.5K</p>
-								</div>
-								<div class="col-md-6">
-									<p>Number of customers Responded: 11.5K</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-6 img-center">
-									<p><img src="img/happytrigger/graph.png" class="img-fluid" alt="" title="" /></p>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane container active" id="tab22">
-								<div class="row">
-									<div class="col-md-4">
-										<p>EMAIL</p>
-										<p>Number of customers Contacted: 20.5K</p>
-										<p>Number of customers Responded: 11.5K</p>
-										<p><img src="img/happytrigger/graph.png" class="img-fluid" alt="" title="" /></p>
-										<h3 class="text-center">55%</h3>
-									</div>
-									<div class="col-md-4">
-										<p>SMS</p>
-										<p>Number of customers Contacted: 290.5K</p>
-										<p>Number of customers Responded: 191.5K</p>
-										<p><img src="img/happytrigger/graph.png" class="img-fluid" alt="" title="" /></p>
-										<h3 class="text-center">85%</h3>
-									</div>
-									<div class="col-md-4">
-										<p>PUSH NOTIFICATION</p>
-										<p>Number of customers Contacted: 250.5K</p>
-										<p>Number of customers Responded: 161.5K</p>
-										<p><img src="img/happytrigger/graph.png" class="img-fluid" alt="" title="" /></p>
-										<h3 class="text-center">58%</h3>
-									</div>
-								</div>
-						</div>
-					</div>
-				
-				
-				</div>
-			</div>
-			
-		
-        </div>
-        
       </div>
     </div>
   </div>
