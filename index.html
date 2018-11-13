@@ -584,11 +584,11 @@
                             <div class="col-md-12 px-4">
                                 <div class="row">
                                     <div class="col-md-9">
-                                        <label>Total Number of Users</label>
-                                        <p>1034</p>
+                                        <label class="fs-18 fw-600">Total Number of Users</label>
+                                        <p class="fs-15 fw-600">1034</p>
                                     </div>
                                     <div class="col-md-3">
-                                        <button class="text-capitalize btn py-3 px-0 pl-5 waves-effect waves-light m-0 themeColorBg boxShadowNone buttonBorder rounded  proxiSemibold pr-3 text-center w-100 vpnDownload">Create New User</button>
+                                        <button class="text-capitalize createBtn btn py-3 px-0 pl-5 waves-effect waves-light m-0 themeColorBg boxShadowNone buttonBorder rounded  proxiSemibold pr-3 text-center w-100 vpnDownload">Create New User</button>
                                     </div>
                                 </div>
                             </div>
@@ -1058,7 +1058,9 @@
     <script>
         jQuery(document).ready(function() {
 
-            $('#dtBasicExample').DataTable();
+            $('#dtBasicExample').DataTable({
+            	"dom": '<t><"td-footer"ilp>'
+            });
             $('.dataTables_length').addClass('bs-select');
 
             // Modal

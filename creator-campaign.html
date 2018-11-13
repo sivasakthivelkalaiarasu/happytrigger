@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="css/skins/flat/purple.css" rel="stylesheet">
   <link href="css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="css/picker/classic.css" rel="stylesheet" />
+  <link href="css/picker/classic.date.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -161,17 +163,34 @@
 	</nav>
 
 	<section class="header-bottom py-5">
-		
+		<div class="container">
+			<div class="row">
+                <div class="col-sm-12">
+                    <h4 class="color-white pb-3">Trigger Happy Settings!</h4>
+                    <p class="color-white">Configure your Trigger Happy application, customize your branding, configure your marketing
+                        <br/> channels, manage your data upload layer and manage users from here.</p>
+                </div>
+            </div>
+            <div class="row mt-3 pb-3">
+                <div class="col-sm-12 col-md-4">
+                    <div class="progress" style="height:5px">
+                        <div class="progress-bar" style="width:40%;height:10px"></div>
+                    </div>
+                    <p class="color-white"><small>60% Completed</small></p>
+                </div>
+                <div class="col-sm-12 col-md-8 text-right">
+                    <ul class="default-ul pull-right status-ul color-white li-iblock">
+                        <li class="pending text-uppercase">Pending</li>
+                        <li class="completed text-uppercase">Completed</li>
+                    </ul>
+                </div>
+            </div>	
+		</div>
 	</section>
 	<section class="settings-area">
 		<div class="container">
-			<div class="settings-area p-4">
-				<div class="row">
-					<div class="col text-right">
-						<button class="btn btn-success text-uppercase btn-curve mb-4 btn-sm">Create New Program</button>
-					</div>
-				</div>
-				<ul class="nav nav-pills nav-fill mb-tabs curve-md-tabs">
+			<div class="settings-area">
+				<ul class="nav nav-pills nav-fill mb-tabs">
 					<li class="nav-item">
 						<a class="nav-link active" data-toggle="tab" href="#tab1">Live Campaigns</a>
 					</li>
@@ -188,8 +207,13 @@
 						<a class="nav-link" data-toggle="tab" href="#tab5">Past Campaings</a>
 					</li>
 				</ul>
+				<div class="row px-4 py-2">
+					<div class="col text-right px-4">
+						<button class="btn btn-success text-uppercase btn-curve mt-2 mb-2 btn-sm">Create New Program</button>
+					</div>
+				</div>
 				<!-- Tab panes -->
-				<div class="tab-content mb-form-fields pt-5 datatable-design">
+				<div class="tab-content mb-form-fields datatable-design px-4 pb-2 tblTop-40">
 					<div class="tab-pane active container" id="tab1">
 					<h2 class="heading-color">15 Campaigns Currently in live</h2>
 						<table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -368,10 +392,11 @@
 </table>
 					</div>
 					<div class="tab-pane container" id="tab2">
-						Tab 2
+						Ready to Live Campaigns
 					</div>
-					<div class="tab-pane container" id="tab3">tab3</div>
+					<div class="tab-pane container" id="tab3">Campaigns Under Review</div>
 					<div class="tab-pane container" id="tab4">
+					<h2 class="heading-color">15 Campaigns rejected</h2>
 					<table id="dtrejectedcampaings" class="table table-striped table-bordered tbody-pointer" cellspacing="0" width="100%">
   <thead>
     <tr>
@@ -548,6 +573,7 @@
 </table>
 					</div>
 					<div class="tab-pane container" id="tab5">
+					<h2 class="heading-color">15 Campaigns in selected period</h2>
 							<table id="dtpastcampaings" class="table table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
@@ -741,6 +767,8 @@
   <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
   <script src="js/icheck.js"></script>
   <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+  <script src="js/picker.js"></script>
+  <script src="js/picker.date.js"></script>
   
 	<script>
 		jQuery(document).ready(function(){
@@ -772,9 +800,15 @@
 			});
 			
 			// Datatable init
-			$('#dtBasicExample').DataTable();
-			$('#dtpastcampaings').DataTable();
-			$('#dtrejectedcampaings').DataTable();
+			$('#dtBasicExample').DataTable({
+            	"dom": 'f<t><"td-footer"ilp>'
+            });
+			$('#dtpastcampaings').DataTable({
+            	"dom": 'f<t><"td-footer"ilp>'
+            });
+			$('#dtrejectedcampaings').DataTable({
+            	"dom": 'f<t><"td-footer"ilp>'
+            });
 			$('.dataTables_length').addClass('bs-select');
 			
 			var table = $('#dtrejectedcampaings').DataTable();
@@ -801,6 +835,8 @@
 		    	$("#viewReport").modal('show');	
 		    })
 		    
+		    // Date picker
+			$('.datepicker').pickadate();
 
 			
 			

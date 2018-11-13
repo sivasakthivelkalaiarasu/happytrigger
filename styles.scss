@@ -51,6 +51,9 @@
 @mixin fontSize($size){
 	font-size:$size;
 }
+@mixin fontWeight($weight){
+	font-weight:$weight;
+}
 
 /** End **/
 
@@ -172,12 +175,13 @@
 			margin: 0 10px;
 			padding: 0 10px;
 			position:relative;
+			font-size:10px;
 		}
 		li.pending{
 			&:before{
 				position:absolute;
 				content:"";
-				top: 3px;
+				top: 0px;
 				right: -10px;
 				display:inline-block;
 				width:12px;
@@ -189,7 +193,7 @@
 			&:before{
 				position:absolute;
 				content:"";
-				top: 3px;
+				top: 0px;
 				right: -10px;
 				display:inline-block;
 				width:12px;
@@ -768,6 +772,13 @@
     background-position-x: 15px;	
 }
 
+.createBtn{
+	background-image:url('img/happytrigger/add.png');
+	background-repeat:no-repeat;
+	background-position-y: center;
+    background-position-x: 15px;	
+}
+
 .uploadBtn{
 	background-image:url('img/happytrigger/uploadIcon.png');
 	background-repeat:no-repeat;
@@ -850,9 +861,6 @@
 				color:#fff;
 		}
 	}	
-	#dtBasicExample_filter{
-		display:none;	
-	}
 	.dataTables_length {
 	    padding: 0px 26px;
 		label, select{
@@ -978,6 +986,67 @@ table.dataTable tfoot th{
 }
 .img-center{
 	margin:0px auto;
+}
+.fs-18{
+	@include fontSize(18px);
+}
+.fs-15{
+	@include fontSize(15px);
+}
+.fw-600{
+	@include fontWeight(600);
+}
+.dataTables_wrapper{
+.td-footer{
+	display: flex;
+    justify-content: flex-end;
+    div:first-child{
+    	 order: 1;
+    	 margin-top: 18px !important;
+    }
+    div:nth-child(2){
+    	 order: 2;
+    	 margin-top: 9px !important;
+    }
+    div:last-child{
+    	 order: 3;
+    }
+    > *{
+    	padding:25px 0px 25px 30px !important;
+    	margin:0px !important;
+    }
+}
+}
+.form-control.datepicker{
+    border: 1px solid #dadada !important;
+    padding-left: 10px;
+    border-radius:5px !important;
+}
+.dataTables_filter input{
+	border: 1px solid #dadada !important;
+	border-radius:5px;
+	padding:3px;
+}
+.datatable-design div.dataTables_length, .datatable-design div.dataTables_filter{
+	margin-top:0px !important;
+	margin-bottom:5px !important;
+}
+.tblTop-40{
+	.dataTables_wrapper{
+		top:-42px; 
+	}
+}
+.dataTable{
+	tr{
+		td:last-child > button{
+			display:none;
+		}
+	}
+	tr:hover{
+		td:last-child > button{
+			display:block;
+		}
+	}
 }
 
 @media(max-width:1023px){
