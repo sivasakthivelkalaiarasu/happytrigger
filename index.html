@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Happy Trigger</title>
+    <title>Trigger Happy - Administration</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -228,7 +228,7 @@
                                         <div class="form-group md-form pending help-area select-field">
                                             <input type="text" id="form3" class="form-control open-input-modal">
                                             <label for="form3" class="">Periodicity Of Customer Contact</label>
-                                            <a class="help-tag" data-toggle="tooltip" data-placement="top" title="Pleaes select the time period before which a product <br /> account contacted via a particular Program may not be" href="javascript:void(0);">
+                                            <a class="help-tag" data-toggle="tooltip" data-placement="top" title="Please select the time period before which a customer <br /> contacted via a particular campaign may not be contacted again" href="javascript:void(0);">
                                                 <img src="img/happytrigger/info.svg" alt="" title="" />
                                             </a>
                                         </div>
@@ -236,7 +236,7 @@
                                     <div class="col-md-5">
                                         <div class="form-group md-form pending select-field">
                                             <input type="text" id="form4" class="form-control open-input-modal">
-                                            <label for="form4" class="">Program Period Selection</label>
+                                            <label for="form4" class="">Campaign Period Selection</label>
                                         </div>
                                     </div>
                                 </div>
@@ -260,7 +260,7 @@
                                     <div class="col-md-5">
                                         <div class="form-group md-form pending select-field">
                                             <input type="text" id="form8" class="form-control open-input-modal">
-                                            <label for="form8" class="">Program Sequencing and Prioritization</label>
+                                            <label for="form8" class="">Campaign Sequencing and Prioritization</label>
                                         </div>
                                     </div>
                                     <div class="col-md-5">
@@ -554,14 +554,14 @@
                                         <div class="row px-3 align-items-center justify-content-center align-items-md-start justify-content-md-start">
                                             <div class="mr-4">
                                                 <div class="custom-control mb-3 custom-checkbox input-selected pl-0">
-                                                    <input type="checkbox">
-                                                    <label class="darkText proxiSemibold">Yes</label>
+                                                    <input type="checkbox" class="custom-control-input" id="vpnkeyyes" checked>
+                                                    <label class="darkText proxiSemibold" for="vpnkeyyes">Yes</label>
                                                 </div>
                                             </div>
                                             <div>
                                                 <div class="custom-control pl-0 mb-3 custom-checkbox">
-                                                    <input type="checkbox">
-                                                    <label class="darkText proxiSemibold">No</label>
+                                                    <input type="checkbox" id="vpnkeyno" class="custom-control-input">
+                                                    <label class="darkText proxiSemibold" for="vpnkeyno">No</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -595,10 +595,9 @@
                         </div>
                         <div class="row">
                             <div class="table-responsive">
-                                <table class="table usersTable" id="dtBasicExample">
+                                <table class="w-100 table usersTable withIcon" id="dtBasicExample">
                                     <thead>
-                                        <tr>
-                                            <th class="proxiSemibold">User Name & Email</th>
+                                            <th class="proxiSemibold">Username & Email</th>
                                             <th class="proxiSemibold">First Name</th>
                                             <th class="proxiSemibold">Last Name</th>
                                             <th class="proxiSemibold">Password</th>
@@ -606,12 +605,11 @@
                                             <th class="proxiSemibold">Seed User</th>
                                             <th class="proxiSemibold">Role</th>
                                             <th class="proxiSemibold">Department</th>
-                                            <th class="proxiSemibold">Edit</th>
-                                        </tr>
+                                            <th class="d-none"></th>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                          
+                            
                                             <td>
                                                 <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -620,64 +618,46 @@
                                             <td class="activeUser proxiSemibold">Active</td>
                                             <td>Yes</td>
                                             <td>Creator</td>
-                                            <td>Credit</td>
+                                            <td>Credit </td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
+                            
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                            
+                                            </td>
+                            
+                                        </tr>
+                                        <tr>
+                            
+                                            <td>
+                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                            <td>Dhipu</td>
+                                            <td>Mathew</td>
+                                            <td>Mathew0#</td>
+                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td>Yes</td>
+                                            <td>Creator</td>
+                                            <td>Credit </td>
+                                            <td>
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
                                             </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
-                                                <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
+                                                <label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
                                             <td>Mathew</td>
                                             <td>Mathew0#</td>
-                                            <td class="activeUser proxiSemibold">Active</td>
+                                            <td class="inActiveUser proxiSemibold">Inactive</td>
                                             <td>Yes</td>
                                             <td>Creator</td>
-                                            <td>Credit</td>
+                                            <td>Credit </td>
                                             <td>
-                                           
-  <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-  aria-expanded="false"><span class="font-weight-bold">...</span></button>
-
-<div class="dropdown-menu">
-  <a class="dropdown-item" href="#">Edit</a>
-  <a class="dropdown-item" href="#">Delete</a>
-</div>
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
                                             </td>
                                         </tr>
                                         <tr>
-                                            
-                                            <td>
-                                                <label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
-                                            <td>Dhipu</td>
-                                            <td>Mathew</td>
-                                            <td>Mathew0#</td>
-                                            <td class="inActiveUser proxiSemibold">Inactive</td>
-                                            <td>Yes</td>
-                                            <td>Creator</td>
-                                            <td>Credit</td>
-                                            <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
-                                        </tr>
-                                        <tr>
-                                            
+                            
                                             <td>
                                                 <label class="w-100">Arun</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -688,18 +668,11 @@
                                             <td>Creator</td>
                                             <td>Credit</td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
                                                 <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -710,18 +683,11 @@
                                             <td>Creator</td>
                                             <td>Credit</td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            
+                            
                                             <td>
                                                 <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -732,18 +698,11 @@
                                             <td>Creator</td>
                                             <td>Credit</td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
                                                 <label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -754,18 +713,10 @@
                                             <td>Creator</td>
                                             <td>Credit</td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i> </td>
                                         </tr>
                                         <tr>
-                                            
+                            
                                             <td>
                                                 <label class="w-100">Arun</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -776,18 +727,12 @@
                                             <td>Creator</td>
                                             <td>Credit</td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                            
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
                                                 <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -796,20 +741,13 @@
                                             <td class="activeUser proxiSemibold">Active</td>
                                             <td>Yes</td>
                                             <td>Creator</td>
-                                            <td>Credit</td>
+                                            <td>Credit </td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                            
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i> </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
                                                 <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -818,20 +756,14 @@
                                             <td class="activeUser proxiSemibold">Active</td>
                                             <td>Yes</td>
                                             <td>Creator</td>
-                                            <td>Credit</td>
+                                            <td>Credit </td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                            
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
                                                 <label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -840,20 +772,14 @@
                                             <td class="inActiveUser proxiSemibold">Inactive</td>
                                             <td>Yes</td>
                                             <td>Creator</td>
-                                            <td>Credit</td>
+                                            <td>Credit </td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                            
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
                                                 <label class="w-100">Arun</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -862,20 +788,14 @@
                                             <td class="inActiveUser proxiSemibold">Inactive</td>
                                             <td>Yes</td>
                                             <td>Creator</td>
-                                            <td>Credit</td>
+                                            <td>Credit </td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                            
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
                                                 <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -886,18 +806,12 @@
                                             <td>Creator</td>
                                             <td>Credit</td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                            
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
                                                 <label class="w-100">Dhipumathew</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -906,20 +820,14 @@
                                             <td class="activeUser proxiSemibold">Active</td>
                                             <td>Yes</td>
                                             <td>Creator</td>
-                                            <td>Credit</td>
+                                            <td>Credit </td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                            
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                           
+                            
                                             <td>
                                                 <label class="w-100">Bharani</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -928,20 +836,13 @@
                                             <td class="inActiveUser proxiSemibold">Inactive</td>
                                             <td>Yes</td>
                                             <td>Creator</td>
-                                            <td>Credit</td>
+                                            <td>Credit </td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i>
+                                            </td>
                                         </tr>
                                         <tr>
-                                          
+                            
                                             <td>
                                                 <label class="w-100">Arun</label><span>dhipumathew04@gmail.com</span></td>
                                             <td>Dhipu</td>
@@ -950,21 +851,14 @@
                                             <td class="inActiveUser proxiSemibold">Inactive</td>
                                             <td>Yes</td>
                                             <td>Creator</td>
-                                            <td>Credit</td>
+                                            <td>Credit </td>
                                             <td>
-                                           
-                                                <button type="button" data-toggle="dropdown" class="bgTransparent border-0" aria-haspopup="true"
-                                                aria-expanded="false"><span class="font-weight-bold">...</span></button>
-                                              
-                                              <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                              </div>
-                                                                                          </td>
+                            
+                                                <i class="fas fa-edit"></i><i class="fa fa-trash-o"></i> </td>
                                         </tr>
                                     </tbody>
                                 </table>
-
+                            
                             </div>
                         </div>
                     </div>
@@ -989,8 +883,10 @@
     <script>
         jQuery(document).ready(function() {
 
+
+            
             $('#dtBasicExample').DataTable({
-            	"dom": '<t><"td-footer"ilp>'
+                "dom": '<t><"td-footer"ilp>'
             });
             $('.dataTables_length').addClass('bs-select');
 
@@ -1030,6 +926,7 @@
 
             //open popup
 		    $('.createUser').click(function(){
+                
 		    	$("#createUser").modal('show');	
 		    })
 
@@ -1143,7 +1040,7 @@
                     <div class="row justify-content-between">
                         <div class="col-md-5">
                             <div class="form-group md-form completed">
-                                <input value="CGS" type="text" id="userform3" class="form-control">
+                                <input value="Trigger Happy User" type="text" id="userform3" class="form-control">
                                 <label for="userform3" class="active">Username</label>
                             </div>
                         </div>

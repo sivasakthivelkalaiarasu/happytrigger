@@ -14,6 +14,12 @@
   font-style: normal; }
 
 @font-face {
+  font-family: 'proxima_novalight';
+  src: url("font/proximanova/ProximaNova-Light.woff2") format("woff2"), url("font/proximanova/ProximaNova-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'opensans_regular';
   src: url("font/opensans/OpenSans-Regular.woff2") format("woff2"), url("font/opensans/OpenSans-Regular.woff") format("woff");
   font-weight: normal;
@@ -544,7 +550,7 @@ nav .dropdown-toggle::after {
   border-radius: 10px; }
 
 .btn {
-  border-radius: 7px; }
+  border-radius: 7px !important; }
 
 .input-selected .checked + label, .custom-radio .checked + label {
   color: #7056aa; }
@@ -890,6 +896,9 @@ div.dataTables_filter {
   margin-bottom: 25px !important;
   padding-top: 14px; }
 
+.rejectionTable .w-105px {
+  width: 105px; }
+
 .rejectionTable td:last-child {
   text-align: left !important; }
 
@@ -921,6 +930,12 @@ div#createUser .custom-control-label::after, div#createUser .custom-control-labe
 
 .md-form input[type="text"]:focus:not([readonly]) + label, .md-form input[type="email"]:focus:not([readonly]) + label, .md-form input[type="password"]:focus:not([readonly]) + label {
   color: #7056aa !important; }
+
+.text-transform-inherit {
+  text-transform: inherit !important; }
+
+.appendRow td {
+  box-shadow: none !important; }
 
 .appendRow td:last-child {
   padding-bottom: 8px !important; }
@@ -1041,6 +1056,89 @@ table.dataTable thead th {
 button:focus, button:active, button:visited, a:focus, a:active, a:visited, img, input, textarea {
   outline: none !important; }
 
+.usersTable.withIcon td:last-child {
+  padding-bottom: 8px !important;
+  position: absolute;
+  right: 0;
+  width: 126px;
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  box-shadow: none !important;
+  margin-top: 4px;
+  margin-right: 5px;
+  border: none; }
+
+.usersTable.withIcon tr:hover td:last-child {
+  visibility: visible;
+  opacity: 1; }
+
+.usersTable.withIcon tr td .fa-edit {
+  font-family: fontawesome;
+  font-size: 20px;
+  font-style: inherit;
+  margin-right: 10px; }
+  .usersTable.withIcon tr td .fa-edit:before {
+    padding-top: 3px; }
+
+.usersTable.withIcon tr td .fa-edit, .usersTable.withIcon tr td .fa-trash-o {
+  cursor: pointer;
+  height: 38px;
+  width: 38px;
+  text-align: center;
+  z-index: 9;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center; }
+
+.usersTable.withIcon tr td .fa-edit:after, .usersTable.withIcon tr td .fa-trash-o:after {
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  content: "";
+  left: 0;
+  border-radius: 50%;
+  z-index: -1; }
+
+.usersTable.withIcon tr td .fa-edit:before, .usersTable.withIcon tr td .fa-trash-o:before {
+  height: 38px;
+  width: 38px; }
+
+.usersTable.withIcon tr td .fa-edit:hover:after, .usersTable.withIcon tr td .fa-trash-o:hover:after {
+  background: rgba(222, 226, 230, 0.5); }
+
+.usersTable.withIcon tr td .fa-trash-o {
+  font-size: 20px;
+  z-index: 9; }
+  .usersTable.withIcon tr td .fa-trash-o:before {
+    margin-top: 7px; }
+
+#main, #maintwo {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto; }
+
+.pushNotification #main {
+  width: 300px !important;
+  height: 340px !important; }
+
+#funnelPanel {
+  width: 600px;
+  margin: 0 auto; }
+  #funnelPanel text {
+    font-weight: 900; }
+
+table.dataTable tbody td, table.dataTable tbody span, table.dataTable tbody label {
+  font-family: proxima_novalight !important; }
+
+tr:hover td {
+  box-shadow: inset 0px 6px 8px -10px #000, inset 0px -10px 8px -10px rgba(117, 117, 117, 0.5); }
+
 @media (max-width: 1023px) {
   .navbar-collapse {
     padding: 0 10px; }
@@ -1048,6 +1146,11 @@ button:focus, button:active, button:visited, a:focus, a:active, a:visited, img, 
     float: right; } }
 
 @media (max-width: 767px) {
+  .funnelGraph {
+    width: 100%;
+    overflow-x: scroll; }
+  .campaignSummaryTabs {
+    width: 100% !important; }
   .tblTop-40 .dataTables_wrapper {
     top: inherit !important; }
   .help-tag {
